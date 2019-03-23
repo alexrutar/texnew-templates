@@ -1,0 +1,6 @@
+doctype: memoir # options: book, article, etc.
+formatting: titlepage # options: titlepage, header
+macros:
+    - theorem
+    - algebra
+    - analysis

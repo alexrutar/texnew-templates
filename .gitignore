@@ -1,0 +1,8 @@
+/*
+!.gitignore
+!LICENSE
+!README.md
+!/share/
+!/log/
+!/test/
+.DS_Store
