@@ -3,6 +3,7 @@
 \usepackage[capitalise,nameinlink]{cleveref}
 
 % Numbered Statements
+\theoremstyle{change}
 \theoremindent\parindent
 \theorembodyfont{\itshape}
 \theoremheaderfont{\bfseries\boldmath}
@@ -11,13 +12,20 @@
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{proposition}[theorem]{Proposition}
 
-% Un-numbered Statements
-\theoremindent0.0cm
+% Claim environment
+\theoremstyle{plain}
 \theorempreskip{0.1cm}
 \theorempostskip{0.1cm}
+\theoremindent0.0cm
+\theoremnumbering{roman}
+\theoremheaderfont{\scshape}
+\newtheorem{claim}{Claim}
+\AtBeginEnvironment{theorem}{\setcounter{claim}{0}}
+
+% Un-numbered Statements
+\theoremstyle{nonumberplain}
 \theorembodyfont{\upshape}
 \theoremheaderfont{\bfseries\itshape}
-\theoremstyle{nonumberplain}
 \newtheorem{definition}{Definition.}
 \theoremheaderfont{\itshape}
 \newtheorem{example}{Example.}

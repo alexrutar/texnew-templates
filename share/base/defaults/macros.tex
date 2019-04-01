@@ -5,10 +5,17 @@
 \DeclareMathOperator{\C}{{\mathbb{C}}}
 \DeclareMathOperator{\F}{{\mathbb{F}}}
 
+% proof implications
 \newcommand{\imp}[2]{($#1\Rightarrow#2$)}
-\newcommand{\brac}[1]{\ensuremath{\left\langle #1 \right\rangle}} % inner product, etc.
-\newcommand{\norm}[1]{\ensuremath{\left\lVert#1\right\rVert}} % norm, #2
+\newcommand{\impr}{($\Rightarrow$)}
+\newcommand{\impl}{($\Leftarrow$)}
 
+% convenient brackets
+\newcommand{\brac}[1]{\ensuremath{\left\langle #1 \right\rangle}}
+\newcommand{\norm}[1]{\ensuremath{\left\lVert#1\right\rVert}}
+\newcommand{\abs}[1]{\ensuremath{\left\lvert#1\right\rvert}}
+
+% arrows
 \newcommand{\lto}[0]{\ensuremath{\longrightarrow}}
 \newcommand{\fto}[1]{\ensuremath{\xrightarrow{\scriptscriptstyle{#1}}}}
 \newcommand{\hto}[0]{\ensuremath{\hookrightarrow}}
@@ -16,12 +23,14 @@
 % Divides, Not Divides
 \renewcommand{\div}{\bigm|}
 \newcommand{\ndiv}{%
-      \mathrel{\mkern.5mu % small adjustment
-              % superimpose \nmid to \big|
-              \ooalign{\hidewidth$\big|$\hidewidth\cr$\nmid$\cr}%
-                }%
-            }
-\newcommand{\cpl}[1]{\overline{#1}} % complement
+    \mathrel{\mkern.5mu % small adjustment
+        % superimpose \nmid to \big|
+        \ooalign{\hidewidth$\big|$\hidewidth\cr$\nmid$\cr}%
+    }%
+}
+
+% Convenient overline
+\newcommand{\ol}[1]{\ensuremath{\overline{#1}}}
 
 % Large cdot
 \makeatletter
