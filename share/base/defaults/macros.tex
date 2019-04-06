@@ -6,14 +6,21 @@
 \DeclareMathOperator{\F}{{\mathbb{F}}}
 
 % proof implications
-\newcommand{\imp}[2]{($#1\Rightarrow#2$)}
-\newcommand{\impr}{($\Rightarrow$)}
-\newcommand{\impl}{($\Leftarrow$)}
+\newcommand{\imp}[2]{($#1\Rightarrow#2$)\hspace{0.2cm}}
+\newcommand{\impr}{{($\Rightarrow$)\hspace{0.2cm}}}
+\newcommand{\impl}{{($\Leftarrow$)\hspace{0.2cm}}}
+
+% multi-line align space
+\newcommand{\agspace}{\ensuremath{\phantom{--}}}
 
 % convenient brackets
 \newcommand{\brac}[1]{\ensuremath{\left\langle #1 \right\rangle}}
 \newcommand{\norm}[1]{\ensuremath{\left\lVert#1\right\rVert}}
 \newcommand{\abs}[1]{\ensuremath{\left\lvert#1\right\rvert}}
+
+% smaller fractions
+\newcommand{\sfrac}[2]{\ensuremath{\frac{\scriptstyle #1}{\scriptstyle #2}}}
+\newcommand{\tfrac}[2]{\ensuremath{{\scriptstyle\frac{#1}{#2}}}}
 
 % arrows
 \newcommand{\lto}[0]{\ensuremath{\longrightarrow}}
@@ -32,13 +39,13 @@
 % Convenient overline
 \newcommand{\ol}[1]{\ensuremath{\overline{#1}}}
 
-% Large cdot
+% Big \cdot
 \makeatletter
 \newcommand*\bigcdot{\mathpalette\bigcdot@{.5}}
 \newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
 \makeatother
 
-% Disjoint Union %
+% Disjoint Union
 \makeatletter
 \providecommand*{\cupdot}{%
   \mathbin{%
