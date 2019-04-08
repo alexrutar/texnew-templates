@@ -1,15 +1,20 @@
-\usepackage{kpfonts}
-\usepackage{dsfont}
-
-% Define Document Variables
+% Document Variables
 \newcommand{\subject}{REPLACE}
 \newcommand{\topic}{REPLACE}
 \newcommand{\semester}{REPLACE}
 
-% Set equation numbering pattern
+% Fonts
+\usepackage{kpfonts}
+\usepackage{dsfont}
+
+% Equation numbering
 \numberwithin{equation}{section}
 
-% Format Table of Contents
+% Footnote
+\setfootins{0.5cm}{0.5cm} % footer space above
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}} % footnote symbol
+
+% Table of Contents
 \renewcommand{\thechapter}{\Roman{chapter}}
 \counterwithout{section}{chapter}
 \counterwithin*{chapter}{part}
@@ -17,7 +22,7 @@
 \setlength\cftchapternumwidth{4em} % Add space before chapter name
 \cftpagenumbersoff{chapter} % Turn off page numbers for chapter
 
-% Format Section / Subsection headers
+% Section / Subsection headers
 \newcommand*{\shortcenter}[1]{%
     \sethangfrom{\noindent ##1}%
     \Large\boldmath\scshape\bfseries
@@ -26,10 +31,10 @@
 \setsecheadstyle{\shortcenter}
 \setsubsecheadstyle{\large\scshape\boldmath\bfseries\raggedright}
 
-% Format Chapter Headers
+% Chapter Headers
 \chapterstyle{verville}
 
-% Format Page Headers / Footers
+% Page Headers / Footers
 \setsecnumdepth{section}
 \copypagestyle{myruled}{ruled} % Draw formatting from existing 'ruled' style
 \makeoddhead{myruled}{}{}{\scshape\subject}
@@ -37,7 +42,7 @@
 \makeoddfoot{myruled}{}{\thepage}{}
 \pagestyle{myruled}
 
-% Format Titlepage
+% Titlepage
 \title{\subject}
 \author{<+name+>\thanks{\itshape <+email+>}\\ <+institution+>}
 \date{\semester\thanks{Last updated: \today}}
