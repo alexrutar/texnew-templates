@@ -1,0 +1,11 @@
+package: base
+
+macros:
+    - theorem_short
+    - algebra
+    - analysis
+formatting: header
+contents: enumerate
+
+substitutions:
+    doctype: article

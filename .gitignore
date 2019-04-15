@@ -2,7 +2,8 @@
 !.gitignore
 !LICENSE
 !README.md
-!/share/
+!/packages/
+!/templates/
 !/log/
 !/test/
 .DS_Store

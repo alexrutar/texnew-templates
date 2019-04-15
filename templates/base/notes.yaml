@@ -1,0 +1,11 @@
+package: base
+
+macros:
+    - theorem
+    - algebra
+    - analysis
+formatting: titlepage
+contents: chapter
+
+substitutions:
+    doctype: memoir
