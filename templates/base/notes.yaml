@@ -1,5 +1,3 @@
-package: base
-
 macros:
     - theorem
     - algebra

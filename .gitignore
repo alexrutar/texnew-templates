@@ -4,6 +4,7 @@
 !README.md
 !/packages/
 !/templates/
+/templates/test
 !/log/
 !/test/
 .DS_Store
