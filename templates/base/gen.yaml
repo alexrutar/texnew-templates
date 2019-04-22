@@ -1,0 +1,5 @@
+formatting: header
+contents: enumerate
+
+substitutions:
+    doctype: article
