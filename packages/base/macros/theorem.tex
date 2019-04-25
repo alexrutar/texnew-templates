@@ -16,9 +16,9 @@
 \theoremstyle{plain}
 \theorempreskip{0.2cm}
 \theorempostskip{0.2cm}
-\theoremnumbering{roman}
 \theoremheaderfont{\scshape}
 \newtheorem{claim}{Claim}
+\renewcommand\theclaim{\Roman{claim}}
 \AtBeginEnvironment{theorem}{\setcounter{claim}{0}}
 
 % Un-numbered Statements
@@ -43,3 +43,7 @@
 \newtheorem{proof}{Proof}
 \theoremsymbol{}
 \newtheorem{nmproof}{Proof}
+
+% Format references
+\crefformat{claim}{(#2#1#3)}
+\crefformat{equation}{(#2#1#3)}
