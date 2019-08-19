@@ -16,8 +16,10 @@
 \renewcommand*{\cftchaptername}{Chapter } % Place 'Chapter' before roman
 \setlength\cftchapternumwidth{4em} % Add space before chapter name
 \cftpagenumbersoff{chapter} % Turn off page numbers for chapter
+\maxtocdepth{section} % table of contents up to section
 
 % Section / Subsection headers
+\setsecnumdepth{section} % numbering up to and including "section"
 \newcommand*{\shortcenter}[1]{%
     \sethangfrom{\noindent ##1}%
     \Large\boldmath\scshape\bfseries
@@ -30,12 +32,13 @@
 \chapterstyle{verville}
 
 % Page Headers / Footers
-\setsecnumdepth{section}
 \copypagestyle{myruled}{ruled} % Draw formatting from existing 'ruled' style
 \makeoddhead{myruled}{}{}{\scshape\subject}
 \makeevenfoot{myruled}{}{\thepage}{}
 \makeoddfoot{myruled}{}{\thepage}{}
 \pagestyle{myruled}
+\setfootins{0.5cm}{0.5cm}
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
 
 % Titlepage
 \title{\subject}

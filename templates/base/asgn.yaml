@@ -7,3 +7,7 @@ contents: enumerate
 
 substitutions:
     doctype: article
+    lmargin: 2cm
+    rmargin: 3cm
+    tmargin: 3cm
+    bmargin: 4cm

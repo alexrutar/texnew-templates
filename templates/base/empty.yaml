@@ -1,0 +1,9 @@
+formatting: empty
+contents: empty
+
+substitutions:
+    doctype: article
+    lmargin: 2cm
+    rmargin: 2cm
+    tmargin: 2cm
+    bmargin: 2cm
