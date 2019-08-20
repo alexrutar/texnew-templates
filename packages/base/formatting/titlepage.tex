@@ -2,8 +2,11 @@
 \usepackage{kpfonts}
 \usepackage{dsfont}
 
-% Equation numbering
+% Adjust numbering
 \numberwithin{equation}{section}
+\counterwithin{figure}{section}
+\counterwithout{section}{chapter}
+\counterwithin*{chapter}{part}
 
 % Footnote
 \setfootins{0.5cm}{0.5cm} % footer space above
@@ -11,8 +14,6 @@
 
 % Table of Contents
 \renewcommand{\thechapter}{\Roman{chapter}}
-\counterwithout{section}{chapter}
-\counterwithin*{chapter}{part}
 \renewcommand*{\cftchaptername}{Chapter } % Place 'Chapter' before roman
 \setlength\cftchapternumwidth{4em} % Add space before chapter name
 \cftpagenumbersoff{chapter} % Turn off page numbers for chapter
