@@ -2,6 +2,8 @@ macros:
     - theorem
     - algebra
     - analysis
+    - tikz
+
 formatting: titlepage
 contents: chapter
 

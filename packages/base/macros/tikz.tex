@@ -1,0 +1,11 @@
+\usepackage{tikz, pgfplots}
+\pgfplotsset{compat=1.15}
+\usetikzlibrary{intersections,positioning,cd}
+\usetikzlibrary{arrows,arrows.meta}
+\usetikzlibrary{decorations.markings}
+\tikzcdset{arrow style=tikz,diagrams={>=stealth}}
+\tikzset{
+    vtx/.style={inner sep=2pt,circle,fill=black},
+    e/.style={thick},
+    de/.style={e,decoration={markings,mark=at position 0.5 with {\arrow{>}}},postaction={decorate}}
+}

@@ -2,8 +2,11 @@ macros:
     - theorem_short
     - algebra
     - analysis
+    - asgn_enumitem
+    - tikz
+
 formatting: header
-contents: enumerate
+contents: solutions
 
 substitutions:
     doctype: article
