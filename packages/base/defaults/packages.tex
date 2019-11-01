@@ -10,14 +10,14 @@
 % Set hyperref
 \usepackage[hidelinks]{hyperref}
 \usepackage{xcolor}
-\newcommand\myshade{85}
-\colorlet{mylinkcolor}{violet}
-\colorlet{mycitecolor}{orange!50!yellow}
-\colorlet{myurlcolor}{green!50!blue}
+\newcommand\refshade{85}
+\colorlet{linkcol}{violet}
+\colorlet{citecol}{orange!50!yellow}
+\colorlet{urlcol}{green!50!blue}
 
 \hypersetup{
-  linkcolor  = mylinkcolor!\myshade!black,
-  citecolor  = mycitecolor!\myshade!black,
-  urlcolor   = myurlcolor!\myshade!black,
-  colorlinks = true,
+    linkcolor  = linkcol!\refshade!black,
+    citecolor  = citecol!\refshade!black,
+    urlcolor   = urlcol!\refshade!black,
+    colorlinks = true,
 }

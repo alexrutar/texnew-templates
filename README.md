@@ -1,5 +1,5 @@
 # Introduction
-This is a repository for templates to be used with the [texnew](https://github.com/alexrutar/texnew).
+This is a repository for templates to be used with the [texnew](https://github.com/alexrutar/texnew) library.
  You should install this repository to `~/.texnew`.
  As an example, the following code should work (on Linux or OSX):
 ~~~
@@ -9,24 +9,27 @@ git clone https://github.com/alexrutar/texnew-templates .texnew
 For more detailed information, please refer to [texnew](https://github.com/alexrutar/texnew).
 
 # Designing Templates
-Templates are organized into template sets which can be found in `.texnew/share`.
-If you want to make your own template set, the easiest way is to copy the structure in `base`.
-Template files are placed in the `templates` directory.
-There are three (mandatory) options to be included in the template:
- - `doctype` can be any valid LaTeX document type (e.g. article, book)
+Templates are organized into template sets for a fixed `<+name+>` which can be found in `.texnew/templates/<+name+>`, which have access to the set of packages in `.texnew/packages/<+name+>`.
+If you want to make your own template set, the easiest way is to copy the structure in `.texnew/templates/base` and `.texnew/packages/base`.
+Template files are placed in the `.texnew/templates/<+name+>` directory.
+There are two mandatory options that must be specified in the template:
  - `formatting` must be any filename (without extension) defined in Formatting
- - `macros` must be any filename (without extension) defined in Macros.
+ - `contents` must be any filename (without extension) defined in Contents.
 Additionally, you can define any substitution variables within the template - note that template-defined variables will override any user-defined variables.
+There are a few special substitutions:
+- `doctype`: the document type (e.g. `article`, `memoir`, etc.)
+- `{l,r,t,b}margin`: the size of the corresponding (left, right, top, bottom) margin
 
 ## Template set directory structure
-See `share/base` for the default example.
+See `packages/base` for the default example.
+In this section, all paths are relative to `.texnew/packages/<+name+>`.
 
 1. Macros: `macros/*`
     - Macro files stored here are accessed by the `macro` option in the templates. You can add your own macros, or pretty much whatever you want here.
 
 2. Formatting: `formatting/*.tex`
     - Formatting files stored here are accessed by the `formatting` option in the templates. I've generally used them to define formatting for the file appearance (fonts, titlepages, etc).
-    They must include `\begin{document}`; the `\end{docment}` label is automatically placed afterwards.
+    They must include `\begin{document}`; the `\end{document}` label is automatically placed afterwards.
     - Wherever `<+key+>` appears in a formatting document, they are automatically replaced by the relevant info in the `user.yaml` file or a substitution in the `template.yaml` file.
     `key` can be any string. You can define new keys.
 
@@ -41,8 +44,9 @@ This is given as follows:
 3. `defaults/macros.tex`
 4. `macros/*.tex` - any macro files included in the template, imported in the same order specified.
 5. A space for file-specific macros (user macros are placed here when updating a file).
-6. `formatting/*.tex`, whatever formatting file you specified
-7. A space for the main document (document is placed here when updating).
+6. `formatting/*_constants.tex`, if it exists
+7. `formatting/*.tex`, whatever formatting file you specified
+8. `contents/*.tex`, which specifies some pre-written component of the main document.
 As a general rule, I try to avoid importing anything in the formatting file to avoid conflict with user imports (notable exception: font packages).
 
 ## Including User Data
